@@ -372,7 +372,6 @@ projectionOpt=optimoptions('quadprog','Display','off','Algorithm','active-set', 
  fitted=cell(K,1);nonScores=cell(K,1);refScores=cell(K,1);
  audit=zeros(K,r,7);oldErrors=zeros(m,K,r);newErrors=zeros(m,K,r);
  oldRef=cell(K,1);rawRef=cell(K,1);projectionDistances=zeros(K,r);
- fprintf('\nXiao reference-score transfer fit\n');
  for k=1:K
   M=score_map(br(:,:,:,k));Mn=score_map(bn(:,:,:,k));
   H=2*(M'*M);H=(H+H')/2;Qfit=zeros(n,z,r);SN=zeros(size(bn,1),r);SR=zeros(m,r);
